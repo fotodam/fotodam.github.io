@@ -1,0 +1,34 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "4.2.0"
+  },
+  "scripts": {
+    "thumbnails": "post_images_thumb.js",
+    "server": "AWS_PROFILE=fotomadeksza hexo server --open",
+    "generate": "AWS_PROFILE=fotomadeksza hexo generate",
+    "new-gallery": "AWS_PROFILE=fotomadeksza hexo new gallery nowa"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "glob": "^7.0.6",
+    "hexo": "^4.2.0",
+    "aws-sdk": "^2.609.0",
+    "lodash": "^4.17.15",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-scss": "^1.2.0",
+    "hexo-renderer-stylus": "^1.1.0",
+    "hexo-server": "^1.0.0",
+    "hexo-util": "latest"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "@types/lodash": "^4.14.149"
+  }
+}

@@ -1,0 +1,301 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import '../foundation/util/_util.scss';
+
+
+/* Naglowek */
+.sk-top	{
+	background: $sk-dark-primary-color;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: $sk-top-menu-h;
+	@include sk-std-shadow;
+}
+
+.top-bar {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	.title-bar {
+		background-color: transparent;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.sk-logo {
+	float: left;
+	@include breakpoint(small only) {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	span {
+		font-size: 40px;
+	}
+}
+
+/* Manu desktop */
+.sk-desktop-menu {
+	> li {
+		line-height: $sk-top-menu-h;
+		height: $sk-top-menu-h;
+		&:hover {
+				background-color: #ff5722;
+				transition:All 0.7s ease-in-out;
+				-webkit-transition:All 1s ease;
+				-moz-transition:All 1s ease;
+				-o-transition:All 1s ease;
+  }
+	}
+	.submenu {
+		@include sk-std-shadow;
+		a {
+			color: $sk-primary-text-color;
+		}
+	}
+}
+
+
+
+/* Menu mobilne */
+#mobile-dropdown {
+	@include sk-std-shadow;
+	background-color: $sk-white;
+	a {
+		color: $sk-primary-text-color;
+	}
+}
+
+/* gorny separator */
+.sk-top-separator {
+	display: block;
+	height: $sk-top-menu-h;
+}
+
+/* Slider */
+.sk-slider {
+	background: url("../img/bg_1.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.orbit {
+	.orbit-slide {
+		color: $sk-white;
+		padding: 2.5rem 0;
+		@include breakpoint (large) {
+			padding: 8rem 0;
+		}
+		p {
+			color: $sk-70p-white;
+			font-size: 1.25rem;
+			@include breakpoint (large) {
+				font-size: 2.25rem;
+			}
+		}
+		h1 {
+			font-size: 3.25rem;
+			text-transform: uppercase;
+			@include breakpoint (large) {
+				font-size: 4rem;
+				line-height: 8rem;
+				letter-spacing: -5px;
+			}
+		}
+		a {
+			margin-top: 15px;
+		}
+	}
+	.orbit-bullets {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		.is-active {
+			background-color: $sk-accent-color;
+		}
+		button:hover {
+			background-color: #CACACA;
+		}
+	}
+}
+
+/* Sekcja Zalety */
+.sk-highlights {
+	padding: 70px 0 80px;
+	.sk-section-header {
+		p {
+			color: $sk-secondary-text-color;
+		}
+	}
+}
+
+.sk-highlight {
+	margin-bottom: 25px;
+	p {
+		color: $sk-87p-black;
+	}
+	h4 {
+		font-size: 1.56rem;
+	}
+	.round-icon {
+		font-size: 3.56rem;
+		margin: 1.7rem 0 1rem;
+		color: $sk-primary-color;
+	}
+}
+
+/* Sekcja Portfolio */
+.sk-portfolio {
+	padding: 100px 0 140px;
+	background-color: #e2ddd4;
+	background-size: cover;
+	.sk-section-header {
+		color: #616360;
+		p {
+			color: $sk-70p-white;
+		}
+	}
+
+	.sk-portfolio-box:last-child {
+		float: left;
+	}
+}
+
+.sk-portfolio-box {
+	margin-bottom: 40px;
+	img {
+		width: 100%;
+	}
+}
+
+.sk-portfolio-title {
+	padding: 20px;
+	h4 {
+		margin-bottom: 10px;
+		font-size: 1.25rem;
+	}
+	p {
+		font-weight: 400;
+	}
+}
+
+/* Sekcja Opinie */
+.sk-opinion {
+	padding: 70px 0 80px;
+	background-color: lighten($sk-divider-color,22%);
+		p {
+			color: $sk-87p-black;
+		}
+	.card {
+		padding: 20px;
+		font-weight: 400;
+	}
+	.sk-opinion-title {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 1.25rem;
+	}
+}
+
+/* Sekcja Cennik */
+.sk-prices {
+	padding: 80px 0 90px;
+	.sk-section-header {
+		p {
+			color: $sk-secondary-text-color;
+		}
+	}
+}
+
+
+.sk-single-offer {
+	margin-bottom: 40px;
+	font-weight: 400;
+	padding: 20px 20px 30px;
+	ul {
+		margin: 2rem 0;
+		font-size: 0.8rem;
+		border-bottom: 1px solid lighten($sk-divider-color,15%);
+		li {
+			border-top: 1px solid lighten($sk-divider-color,15%);
+			line-height: 2.4;
+		}
+	}
+}
+
+.sk-offer-title {
+	margin-bottom: 0.6rem;
+	font-size: 2.5rem;
+	font-weight: 700;
+	display: block;
+	color: $sk-87p-black;
+}
+
+.sk-offer-desc {
+	font-size: 0.8rem;
+	display: block;
+}
+
+.sk-offer-price {
+	span {
+		font-weight: 700;
+	}
+}
+
+.sk-offer-best {
+	color: $sk-accent-color;
+	.sk-offer-title {
+		color: $sk-accent-color;
+	}
+
+}
+
+/* Stopka  */
+.sk-footer {
+	background: $sk-primary-color;
+	padding-top: 40px;
+	color: #FFFFFF;
+	.columns {
+		padding-bottom: 30px;
+	}
+	.sk-form {
+		button {
+			margin: 0;
+		}
+	}
+}
+
+.sk-phone-number {
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+.sk-copyright {
+    color: #fff;
+	// background-color: $sk-dark-primary-color;
+	p {
+		line-height: 5;
+		margin-bottom: 0;
+		padding-left: 1rem;
+	}
+}
+
+.foto_social {
+	list-style-type: none;
+	line-height: 50px;
+	margin-top: 20px;
+}
+
+.gallery-tiles {
+	.columns:last-child {
+		float: left;
+	}
+}
+
+.sk-portfolio {
+	.columns:last-child {
+		float: left;
+	}
+}

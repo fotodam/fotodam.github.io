@@ -1,0 +1,131 @@
+<!-- Portfolio -->
+<a name="myAnchorPortfolio" id="myAnchorPortfolio">
+</a>
+<section class="sk-portfolio">
+    <div class="row">
+        <div class="sk-section-header text-center">
+            <h2>Galeria</h2>
+        </div>
+    </div>
+    <% _.chunk(site.data.galleries, 4).forEach(function(chunk){ %>
+        <div class="row">
+            <% chunk.forEach(function(gallery){ %>
+                <div class="medium-3 columns sk-portfolio-box wow fadeIn">
+                    <a href="<%- url_for(gallery.path) %>">
+                        <div class="card">
+                            <img src="<%- s3galleryPhotoUrl(gallery.data.gallery.startPhoto) %>" alt="<%= gallery.data.gallery.galleryName %>">
+
+                            <div class="sk-portfolio-title text-center">
+                                <h4><%= gallery.data.gallery.galleryName %></h4>
+                                <div class="small button" href="<%- url_for(gallery.path) %>">Zobacz</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    <% }) %>
+    </div>
+</section>
+
+
+<!-- Oferta -->
+<a name="myAnchorOferta" id="myAnchorOferta">
+</a>
+<section class="sk-highlights">
+    <div class="row features">
+        <div class="sk-section-header text-center">
+            <h2>Moja oferta</h2>
+        </div>
+        <div class="small-12 medium-6 large-6 columns sk-highlight text-left wow zoomIn">
+            <div class="round-icon">
+                <span class="fi-camera"></span>
+            </div>
+            <h4>1.Reportaż ślubny</h4>
+            <p></p>
+            <p>Obejmuje wykonanie zdjęć od porannych<br> przygotowań do późnych godzin nocnych na weselu. <br> Zawiera następujące części:</p>
+            -przygotowania <br> -sesję plenerową <br> -błogosławieństwo <br> -kościół <br> -zabawę weselną do około 1.00 w nocy
+            </p>
+        </div>
+        <div class="small-12 medium-6 large-6 columns sk-highlight text-left wow zoomIn">
+            <div class="round-icon">
+                <span class="fi-camera"></span>
+            </div>
+            <h4>2.Studniówki</h4>
+            <h4>3.Chrzty</h4>
+            <h4>4.Komunie</h4>
+            <h4>5.Urodziny</h4>
+            <h4>6.Imprezy okolicznościowe</h4>
+        </div>
+</section>
+
+<!-- Oferta -->
+<!-- <a name="myAnchorCennik" id="myAnchorCennik">
+</a>
+<section class="sk-highlights">
+    <div class="row features">
+        <div class="sk-section-header text-center">
+            <h2>Cennik</h2>
+        </div>
+        <div class="small-12 medium-6 large-6 columns sk-highlight text-left wow zoomIn">
+            <div class="round-icon">
+                <span class="fi-dollar"></span>
+            </div>
+            <h4>Całkowity pakiet  koszt 1800 zl</h4>
+<p>
+            Pakiet obejmuje:
+<ul>
+<li>przygotowania</li>
+<li>ślub</li>
+<li>wesele do okolo 1 w nocy</li>
+<li>plener (w innym dniu) w kilku miejscach np. żaglówki, stara hala opuszczona, molo nad morzem, w zbożu, park, pole golfowe, bilard 
+
+jeśli chodzi o plener to im szybciej zaczniemy tym więcej miejsc odwiedzimy (bez ograniczeń).</li>
+</ul>
+ (razem od 500 do 700 zdjęć po obróbce na płytach DVD -ilość zależna od ilości gości zabawy i uśmiechu na twarzy 🙂)
+ </p>
+</div>
+</section>
+-->
+<!-- Stopka -->
+<footer class="sk-footer">
+    <!-- Gorna czesc stopki -->
+    <div class="row">
+        <a name="myAnchorKontakt" id="myAnchorKontakt">
+        </a>
+        <div class="medium-6 columns">
+            <h4>Kontakt:</h4>
+            <h4>FOTO MADEKSZA</h4>
+            <a href="tel:+48505548541" class="sk-contact">
+                <span class="fi-telephone" style="font-size:1.7rem"></span> 505 548 541
+            </a>
+            </br>
+            <a href="mailto:damianmadeksza@gmail.com" class="sk-contact">
+                <span class="fi-mail" style="font-size:1.7rem"></span> damianmadeksza@gmail.com
+            </a>
+            <ul class="foto_social">
+                <li>
+                    <a href="https://www.facebook.com/Foto-Madeksza-540869582758491/?skip_nax_wizard=true"><img src="/images/facebook.png" alt=""/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/images/twitter.png" alt=""/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/images/googleplus.png" alt=""/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/images/youtube.png" alt=""/></a>
+                </li>
+            </ul>
+        </div>
+        <div class="medium-6 columns">
+            <!-- <form action="" class="sk-form">
+                <input type="text" placeholder="Imię *" />
+                <input type="text" placeholder="Nazwisko *" />
+                <input type="text" placeholder="Email *" />
+                <textarea cols="30" rows="4" placeholder="Treść wiadomości"></textarea>
+                <button class="button float-right">Wyślij</button>
+            </form> -->
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,15 @@
+<section style="margin-bottom: 30px" class="gallery-tiles wow slideInDown">
+    <div class="row" style="margin-top:30px;">
+        <% page.gallery.photos.forEach(function(photo, index){ %>
+        <div class="small-12 medium-12 large-12 columns">
+            <a class="gallery-thumb-link" href="<%- s3galleryPhotoUrl(photo) %>">
+               <img srcset="<%- s3galleryPhotoUrl(photo) %> 1000w,
+                            <%- s3galleryPhotoUrl(photo) %> 600w"
+                    src="<%- s3galleryPhotoUrl(photo) %>"
+                    class="gallery-thumb" 
+                    alt="<%- photo.path %>">
+            </a>
+        </div>
+        <% }) %>
+    </div>
+</section>

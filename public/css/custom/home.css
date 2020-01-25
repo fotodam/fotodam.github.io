@@ -1,0 +1,220 @@
+/* Kolory */
+/* Rozmiary 303F9F*/
+/* Naglowek */
+.sk-top {
+  background: #c3b08d;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.top-bar {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  .top-bar .title-bar {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.sk-logo {
+  float: left; }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .sk-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); } }
+  .sk-logo span {
+    font-size: 40px; }
+
+/* Manu desktop */
+.sk-desktop-menu > li {
+  line-height: 70px;
+  height: 70px; }
+  .sk-desktop-menu > li:hover {
+    background-color: #ff5722;
+    transition: All 0.7s ease-in-out;
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -o-transition: All 1s ease; }
+
+.sk-desktop-menu .submenu {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  .sk-desktop-menu .submenu a {
+    color: #000000; }
+
+/* Menu mobilne */
+#mobile-dropdown {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF; }
+  #mobile-dropdown a {
+    color: #000000; }
+
+/* gorny separator */
+.sk-top-separator {
+  display: block;
+  height: 70px; }
+
+/* Slider */
+.sk-slider {
+  background: url("../img/bg_1.jpg") no-repeat center center;
+  background-size: cover; }
+
+.orbit .orbit-slide {
+  color: #FFFFFF;
+  padding: 2.5rem 0; }
+  @media screen and (min-width: 64em) {
+    .orbit .orbit-slide {
+      padding: 8rem 0; } }
+  .orbit .orbit-slide p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.25rem; }
+    @media screen and (min-width: 64em) {
+      .orbit .orbit-slide p {
+        font-size: 2.25rem; } }
+  .orbit .orbit-slide h1 {
+    font-size: 3.25rem;
+    text-transform: uppercase; }
+    @media screen and (min-width: 64em) {
+      .orbit .orbit-slide h1 {
+        font-size: 4rem;
+        line-height: 8rem;
+        letter-spacing: -5px; } }
+  .orbit .orbit-slide a {
+    margin-top: 15px; }
+
+.orbit .orbit-bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .orbit .orbit-bullets .is-active {
+    background-color: #ff5722; }
+  .orbit .orbit-bullets button:hover {
+    background-color: #CACACA; }
+
+/* Sekcja Zalety */
+.sk-highlights {
+  padding: 70px 0 80px; }
+  .sk-highlights .sk-section-header p {
+    color: #727272; }
+
+.sk-highlight {
+  margin-bottom: 25px; }
+  .sk-highlight p {
+    color: rgba(0, 0, 0, 0.87); }
+  .sk-highlight h4 {
+    font-size: 1.56rem; }
+  .sk-highlight .round-icon {
+    font-size: 3.56rem;
+    margin: 1.7rem 0 1rem;
+    color: #c2ac82; }
+
+/* Sekcja Portfolio */
+.sk-portfolio {
+  padding: 100px 0 140px;
+  background-color: #e2ddd4;
+  background-size: cover; }
+  .sk-portfolio .sk-section-header {
+    color: #616360; }
+    .sk-portfolio .sk-section-header p {
+      color: rgba(255, 255, 255, 0.7); }
+  .sk-portfolio .sk-portfolio-box:last-child {
+    float: left; }
+
+.sk-portfolio-box {
+  margin-bottom: 40px; }
+  .sk-portfolio-box img {
+    width: 100%; }
+
+.sk-portfolio-title {
+  padding: 20px; }
+  .sk-portfolio-title h4 {
+    margin-bottom: 10px;
+    font-size: 1.25rem; }
+  .sk-portfolio-title p {
+    font-weight: 400; }
+
+/* Sekcja Opinie */
+.sk-opinion {
+  padding: 70px 0 80px;
+  background-color: #eeeeee; }
+  .sk-opinion p {
+    color: rgba(0, 0, 0, 0.87); }
+  .sk-opinion .card {
+    padding: 20px;
+    font-weight: 400; }
+  .sk-opinion .sk-opinion-title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.25rem; }
+
+/* Sekcja Cennik */
+.sk-prices {
+  padding: 80px 0 90px; }
+  .sk-prices .sk-section-header p {
+    color: #727272; }
+
+.sk-single-offer {
+  margin-bottom: 40px;
+  font-weight: 400;
+  padding: 20px 20px 30px; }
+  .sk-single-offer ul {
+    margin: 2rem 0;
+    font-size: 0.8rem;
+    border-bottom: 1px solid gainsboro; }
+    .sk-single-offer ul li {
+      border-top: 1px solid gainsboro;
+      line-height: 2.4; }
+
+.sk-offer-title {
+  margin-bottom: 0.6rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  color: rgba(0, 0, 0, 0.87); }
+
+.sk-offer-desc {
+  font-size: 0.8rem;
+  display: block; }
+
+.sk-offer-price span {
+  font-weight: 700; }
+
+.sk-offer-best {
+  color: #ff5722; }
+  .sk-offer-best .sk-offer-title {
+    color: #ff5722; }
+
+/* Stopka  */
+.sk-footer {
+  background: #c2ac82;
+  padding-top: 40px;
+  color: #FFFFFF; }
+  .sk-footer .columns {
+    padding-bottom: 30px; }
+  .sk-footer .sk-form button {
+    margin: 0; }
+
+.sk-phone-number {
+  font-weight: 400;
+  font-size: 1.4rem; }
+
+.sk-copyright {
+  color: #fff; }
+  .sk-copyright p {
+    line-height: 5;
+    margin-bottom: 0;
+    padding-left: 1rem; }
+
+.foto_social {
+  list-style-type: none;
+  line-height: 50px;
+  margin-top: 20px; }
+
+.gallery-tiles .columns:last-child {
+  float: left; }
+
+.sk-portfolio .columns:last-child {
+  float: left; }

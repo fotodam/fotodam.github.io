@@ -1,0 +1,47 @@
+/* Naglowke sekcji */
+.sk-section-header {
+	margin-bottom: 2.7rem;
+	h2 {
+		font-size: 2.85rem;
+	}
+}
+
+/* Karty */
+.card {
+	border-radius: 2px;
+	background: $sk-white;
+	@include sk-std-shadow;
+	@include sk-transition;
+	&:hover {
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
+	}
+}
+
+/* Przyciski */
+.button {
+	text-transform: uppercase;
+	@include sk-std-shadow;	
+	&:hover {
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+}
+
+/* Formularze */
+.sk-form {
+	input, textarea {
+		color: rgb(255,255,255);
+		border-bottom: 1px solid $sk-divider-color;
+		&:active, &:focus {
+			border-bottom: 1px solid $sk-accent-color;
+		}
+	}
+	::-moz-placeholder {
+		color: $sk-70p-white;
+	}
+	::-webkit-input-placeholder {
+		color: $sk-70p-white;
+	}
+	:-ms-input-placeholder {
+		color: $sk-70p-white;
+	}
+}

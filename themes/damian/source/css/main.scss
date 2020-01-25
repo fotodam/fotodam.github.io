@@ -1,0 +1,25 @@
+// Import foundation
+@import 'foundation-sites.scss';
+
+// Import wlasne style
+@import 'custom/variables.scss';
+@import 'custom/mixins.scss';
+@import 'custom/global.scss';
+@import 'custom/home.scss';
+
+.gallery-thumb-link {
+    display: block;
+    width: 100%;
+}
+.gallery-thumb {
+    width: 100%;
+}
+
+.dropdown-pane {
+    top: 60px;
+}
+
+.sk-footer .sk-contact {
+    color: #fff;
+    font-size: 1.5em;
+}
