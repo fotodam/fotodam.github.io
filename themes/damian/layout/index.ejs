@@ -13,7 +13,8 @@
                 <div class="medium-3 columns sk-portfolio-box wow fadeIn">
                     <a href="<%- url_for(gallery.path) %>">
                         <div class="card">
-                            <img src="<%- s3galleryPhotoUrl(gallery.data.gallery.startPhoto) %>" alt="<%= gallery.data.gallery.galleryName %>">
+                            <img src="<%- s3galleryPhotoUrl(gallery.data.gallery.startPhoto, { resize: { width: 800 } }) %>"
+                                 alt="<%= gallery.data.gallery.galleryName %>">
 
                             <div class="sk-portfolio-title text-center">
                                 <h4><%= gallery.data.gallery.galleryName %></h4>

@@ -4,11 +4,32 @@ const s3 = new S3({
     region: 'eu-central-1'
 });
 
-
 const bucket = 'fotomadeksza';
 
-hexo.extend.helper.register('s3galleryPhotoUrl', function s3galleryPhotoUrl(photo) {
+
+const s3directAccessPhotoUrl = function (photo) {
     return `https://${bucket}.s3.amazonaws.com/${encodeURIComponent(photo.Key)}`
+};
+
+const cloudfrontResizedAccessPhotoUrl = function (photo, resizeOpts = {}) {
+    const resizeParamsAsBase64 = Buffer.from(JSON.stringify({
+        bucket: bucket,
+        key: photo.Key,
+        edits: resizeOpts
+    })).toString('base64');
+    return `https://doilzw5gpjurq.cloudfront.net/${resizeParamsAsBase64}`;
+};
+
+const s3galleryPhotoUrl = cloudfrontResizedAccessPhotoUrl;
+hexo.extend.helper.register('s3galleryPhotoUrl', s3galleryPhotoUrl);
+hexo.extend.helper.register('responsivePhoto', function (photo, attributes = {}) {
+    const attrs = Object.keys(attributes).reduce((acc, cur) => acc.concat(`${cur}="${attributes[cur]}"`), []).join(' ');
+    return `<img srcset="${s3galleryPhotoUrl(photo, { resize: { width: 1000 } })} 1000w,
+        ${s3galleryPhotoUrl(photo, { resize: { width: 800 } })} 800w,
+        ${s3galleryPhotoUrl(photo, { resize: { width: 600 } })} 600w"
+    src="${s3galleryPhotoUrl(photo)}"
+    ${attrs}>
+`
 });
 
 hexo.extend.generator.register('s3galleries', async function s3galleriesGenerator(locals) {
@@ -26,7 +47,8 @@ hexo.extend.generator.register('s3galleries', async function s3galleriesGenerato
         const galleryName = commonPrefix.Prefix.replace(/^\d+\.?/g, '')
             .replace(/\/$/, '');
 
-        const objects = objectsInGallery.Contents;
+        const isNotFolder = obj => !/\/$/.test(obj.Key);
+        const objects = objectsInGallery.Contents.filter(isNotFolder);
         const startObject = objects.find(o => /startowa/i.test(o.Key)) || objects[0];
         const galleryPath = `gallery/${kebabCase(galleryName)}/`;
 
