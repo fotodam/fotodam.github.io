@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "scripts": {
     "thumbnails": "post_images_thumb.js",
@@ -14,7 +14,7 @@
   "dependencies": {
     "async": "^2.0.1",
     "glob": "^7.0.6",
-    "hexo": "^4.2.0",
+    "hexo": "^4.2.1",
     "aws-sdk": "^2.609.0",
     "lodash": "^4.17.15",
     "hexo-generator-archive": "^1.0.0",
