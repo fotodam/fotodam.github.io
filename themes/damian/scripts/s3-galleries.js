@@ -24,7 +24,7 @@ const s3galleryPhotoUrl = cloudfrontResizedAccessPhotoUrl;
 hexo.extend.helper.register('s3galleryPhotoUrl', s3galleryPhotoUrl);
 hexo.extend.helper.register('responsivePhoto', function (photo, attributes = {}) {
     const attrs = Object.keys(attributes).reduce((acc, cur) => acc.concat(`${cur}="${attributes[cur]}"`), []).join(' ');
-    return `<img loading="lazy" srcset="${s3galleryPhotoUrl(photo, { resize: { width: 1000 } })} 1000w,
+    return `<img class="gallery-image"  loading="lazy" srcset="${s3galleryPhotoUrl(photo, { resize: { width: 1000 } })} 1000w,
         ${s3galleryPhotoUrl(photo, { resize: { width: 800 } })} 800w,
         ${s3galleryPhotoUrl(photo, { resize: { width: 600 } })} 600w"
     src="${s3galleryPhotoUrl(photo)}"
