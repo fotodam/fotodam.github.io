@@ -2566,3 +2566,6 @@ body.is-reveal-open {
 .sk-footer .sk-contact {
   color: #fff;
   font-size: 1.5em; }
+
+.gallery-image {
+  min-height: 100px; }
