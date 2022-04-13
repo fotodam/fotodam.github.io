@@ -12,7 +12,7 @@
     "new-gallery": "AWS_PROFILE=fotomadeksza hexo new gallery nowa"
   },
   "dependencies": {
-    "async": "^2.0.1",
+    "async": "^3.2.2",
     "glob": "^7.0.6",
     "hexo": "^4.2.1",
     "aws-sdk": "^2.609.0",
